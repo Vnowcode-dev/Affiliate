@@ -1,0 +1,165 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      color: #000;
+      min-height: 100vh;
+      background-color: #8FA276;      
+    }
+
+
+    /* Header */
+    header {
+      background: #F3EDE0;
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      text-align: center;
+      /* animasi */
+      opacity: 0;
+      animation: fadeInDown 1s ease forwards;
+    }
+ 
+    header .logo img {
+      width: 100px;
+      border-radius: 50%;
+      height: auto; /* biar proporsi aman */
+    }
+
+    /* Main / Linktree style */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+      /* animasi */
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .product-link {
+      width: 100%;
+      height: 60px;
+      max-width: 500px;
+      font-size: 20px;
+      background-color: #F3EDE0;
+      isolation: isolate; /* penting buat ngebuat konteks sendiri */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* buat Safari */
+      padding: 20px ;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 999px;
+      font-family: Verdana, Tahoma, sans-serif;
+      font-weight: bold;
+      color: #3e7340;
+      transition: transform 0.2s, background 0.2s;
+      /* animasi */
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    
+    .product-link:hover {
+      transform: scale(1.05);
+      background: #8FA276; 
+      filter: drop-shadow(0 0 5px #000000) drop-shadow(0 0 10px #8FA276);
+      color: #e5fcf6;
+    }
+
+    /* Footer */
+    footer {
+      background: #F3EDE0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 100vh;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      /* animasi */
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .copi{
+      color: black;
+      font-size: large;
+      position: relative;
+      text-align: center ;
+      align-items: center;
+      font-family: monospace;
+      font-weight: normal;
+    }
+
+    footer a svg {
+      width: 28px;
+      height: 28px;
+      fill: black;
+      transition: 0.2s;
+    }
+
+
+
+/*Shope*/
+.sh svg{
+  width: 35px;
+  height: 35px;
+  fill: rgb(0, 0, 0);
+  transition: transform 0.3s;
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.sh svg:hover{
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 5px #8FA276) drop-shadow(0 0 10px #ffffff);
+}
+
+.sh a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.product-link:nth-child(1) { animation-delay: 0.4s; }
+.product-link:nth-child(2) { animation-delay: 0.55s; }
+.product-link:nth-child(3) { animation-delay: 0.7s; }
+.product-link:nth-child(4) { animation-delay: 0.85s; }
+.product-link:nth-child(5) { animation-delay: 1s; }
+.product-link:nth-child(6) { animation-delay: 1.15s; }
+.product-link:nth-child(7) { animation-delay: 1.3s; }
+.product-link:nth-child(8) { animation-delay: 1.45s; }
+.product-link:nth-child(9) { animation-delay: 1.6s; }
+.product-link:nth-child(10) { animation-delay: 1.75s; }
+.product-link:nth-child(11) { animation-delay: 1.9s; }
+.product-link:nth-child(12) { animation-delay: 2.05s; }
