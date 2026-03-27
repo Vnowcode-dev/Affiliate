@@ -193,6 +193,8 @@
 
 .product-item img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
 }
@@ -301,6 +303,43 @@
         transform: translateY(0);
       }
     }
+    /* Tampilan PC */
+    #productGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+
+    /* Tampilan Ipad */
+    @media (max-width: 1024px) {
+    #productGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-item {
+      min-height: auto;
+    }
+  }
+
+    /* Tampilan HangPong */
+    @media (max-width: 768px) {
+    #productGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .product-item {
+      padding: 12px;
+    }
+
+    .product-item h2 {
+      font-size: 14px;
+    }
+
+    .product-item p {
+      font-size: 13px;
+    }
+  }
   </style>
 </head>
 
@@ -355,7 +394,14 @@
         <h2>Gamis Brokat Mewah Kekinian</h2>
         <p>Rp120.000</p>
         <div class="btnlink"><a href="https://s.shopee.co.id/9ztIWY3AzA">Gazz</a></div>
-      </article>
+        </article>
+        
+        <article class="product-item" data-name="Dress satu Set Inner Outer Dan Rok" data-link="https://s.shopee.co.id/7fVPEv5UkT">
+        <img src="imgpr/Gamis 4.png" alt="Produk 5">
+        <h2>Dress satu Set Inner Outer Dan Rok</h2>
+        <p>Rp160.000</p>
+        <div class="btnlink"><a href="https://s.shopee.co.id/7fVPEv5UkT">Gazz</a></div>
+        </article>
 
   </main>
 
